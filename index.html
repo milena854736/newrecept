@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Книга рецептов</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <h1>📖 Книга рецептов</h1>
+  <p>36 домашних рецептов · завтраки, обеды, полдники и ужины</p>
+</header>
+
+<main class="container">
+  <div class="search-row">
+    <input type="text" id="searchName" class="search-input" placeholder="🔍 Поиск по названию...">
+    <input type="text" id="searchIngredient" class="search-input" placeholder="🛒 Поиск по ингредиенту...">
+  </div>
+
+  <div class="categories" id="categories">
+    <button class="cat-btn" data-cat="ЗАВТРАКИ">🍳 Завтраки</button>
+    <button class="cat-btn" data-cat="ОБЕД (Первые блюда)">🍲 Первые блюда</button>
+    <button class="cat-btn" data-cat="ОБЕД (Вторые блюда)">🍖 Вторые блюда</button>
+    <button class="cat-btn" data-cat="ОБЕД (Десерты)">🍰 Десерты</button>
+    <button class="cat-btn" data-cat="ПОЛДНИК">🥤 Полдник</button>
+    <button class="cat-btn" data-cat="УЖИН">🍽 Ужин</button>
+    <button class="cat-btn" data-cat="МОИ РЕЦЕПТЫ">✍️ Мои рецепты</button>
+    <button class="cat-btn active" data-cat="ВСЕ">📋 Все блюда</button>
+    <button class="cat-btn" id="btnRandom">🎲 Случайный</button>
+  </div>
+
+  <h2 id="sectionTitle">Выберите категорию</h2>
+  <div id="recipeList" class="recipe-list"></div>
+  <div id="emptyMessage" class="empty hidden">Ничего не найдено. Попробуйте другой запрос или категорию.</div>
+
+  <section class="add-form">
+    <h2>✍️ Добавить свой рецепт</h2>
+    <input type="text" id="inpName" class="inp" placeholder="Название блюда">
+    <div class="row2">
+      <input type="text" id="inpTime" class="inp" placeholder="Время (например, 30 минут)">
+      <input type="number" id="inpCal" class="inp" placeholder="Калории на порцию">
+    </div>
+    <input type="text" id="inpIng" class="inp" placeholder="Ингредиенты через запятую: Мука, Молоко, Яйца">
+    <textarea id="inpSteps" class="inp" rows="4" placeholder="Шаги приготовления через точку"></textarea>
+    <div class="row2">
+      <button id="btnAdd" class="btn-primary">Добавить рецепт</button>
+      <button id="btnClear" class="btn-ghost">Очистить мои рецепты</button>
+    </div>
+    <p class="hint">Ваши рецепты сохраняются в этом браузере и остаются после перезагрузки страницы.</p>
+  </section>
+</main>
+
+<div id="toast" class="toast hidden"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
